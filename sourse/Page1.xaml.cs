@@ -61,7 +61,7 @@ namespace WpfApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка загрузки таблиц:\n" + ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("ошибка загрузки таблиц:\n" + ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 if (connection.State == System.Data.ConnectionState.Open)
                     connection.Close();
             }
@@ -85,7 +85,7 @@ namespace WpfApp1
 
             if (string.IsNullOrEmpty(name))
             {
-                MessageBox.Show("Введите имя поля.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Введите имя поля", "ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -311,7 +311,7 @@ namespace WpfApp1
         
         private void ButtonUpdateTable_Click(object sender, RoutedEventArgs e)
         {
-            // Пока реализуется как удалить и создать заново
+            // Пока реализуеем как удалить и создать заново
             string oldName = ListBoxTables.SelectedItem?.ToString();
             string newName = TextBoxTableName.Text.Trim();
 
